@@ -26,7 +26,7 @@
 <link href="/assets/profile.jpeg" rel="apple-touch-icon-precomposed" />
 <!-- Android Lolipop Theme Color -->
 <!-- <meta name="theme-color" content="#1464FB"> -->
-<title>Test</title>
+<title>vscode配置snippets</title>
 <!-- 百度统计 -->
 
 <script>
@@ -100,7 +100,7 @@ var _hmt = _hmt || [];
 <!-- 引入博文顶部样式 -->
 <!-- 版本一 垃圾 -->
 <!-- <div class="wow fadeIn top" data-wow-duration="3.5s" >
-    <span class="wow fadeInUp" data-wow-delay="0.2s">Test</span>
+    <span class="wow fadeInUp" data-wow-delay="0.2s">vscode配置snippets</span>
     <span class="wow fadeInUp" data-wow-delay="0.4s">test</span>
     <span class="wow fadeInUp" data-wow-delay="0.4s">test</span>
     <span class="wow fadeInUp" data-wow-delay="0.6s">作者&nbsp;&nbsp;|&nbsp;&nbsp;true</span>
@@ -117,7 +117,7 @@ var _hmt = _hmt || [];
     
   </div>
   <div class="post-titlearea">
-    <span class="wow fadeInUp" data-wow-delay="0.2s">Test</span>
+    <span class="wow fadeInUp" data-wow-delay="0.2s">vscode配置snippets</span>
     <!-- <span class="wow fadeInUp" data-wow-delay="0.4s">test</span> -->
     <!-- <span class="wow fadeInUp" data-wow-delay="0.4s">test</span> -->
     <!-- <span class="wow fadeInUp" data-wow-delay="0.6s">作者&nbsp;&nbsp;|&nbsp;&nbsp;true</span> -->
@@ -146,13 +146,60 @@ var _hmt = _hmt || [];
   
     
       <div class="postpage-subtitle" style="border-left: 8px solid rgb(154,133,255); border-right: 8px solid rgb(154,133,255)">
-        test
+        snippets
       </div>
     
   
 
   <!-- 文章内容 -->
-  <h1 id="test">Test</h1>
+  <h1 id="vscode-配置snippets">Vscode 配置snippets</h1>
+
+<p>由于需要使用jekyll，通过markdown来生成网站的博文。为了方便，于是决定使用vscode的snippets来生成markdown文件的配置信息。</p>
+
+<h2 id="配置snippet">配置snippet</h2>
+
+<p>最终的配置结果见下：</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+	</span><span class="nl">"jekyll"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+	</span><span class="nl">"prefix"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jekyll"</span><span class="p">,</span><span class="w">
+	</span><span class="nl">"body"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+		</span><span class="s2">"---"</span><span class="p">,</span><span class="w">
+		</span><span class="s2">"layout: post"</span><span class="p">,</span><span class="w">
+		</span><span class="s2">"title:  $1"</span><span class="p">,</span><span class="w">
+		</span><span class="s2">"subtitle: $2"</span><span class="p">,</span><span class="w">
+		</span><span class="s2">"date: $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND"</span><span class="p">,</span><span class="w">
+		</span><span class="s2">"tags: $3"</span><span class="p">,</span><span class="w">
+		</span><span class="s2">"description: $4"</span><span class="p">,</span><span class="w">
+		</span><span class="s2">"color: '${5|rgb(154</span><span class="se">\\</span><span class="s2">,133</span><span class="se">\\</span><span class="s2">,255)},rgb(255</span><span class="se">\\</span><span class="s2">,90</span><span class="se">\\</span><span class="s2">,90),rgb(255</span><span class="se">\\</span><span class="s2">,210</span><span class="se">\\</span><span class="s2">,32)|}'"</span><span class="p">,</span><span class="w">
+		</span><span class="s2">"---"</span><span class="p">,</span><span class="w">
+		</span><span class="s2">"$0"</span><span class="w">
+	</span><span class="p">],</span><span class="w">
+	</span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jekyll template"</span><span class="p">,</span><span class="w">
+	</span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>注意，body中的color field使用了vscode snippet的选择格式，由于color方案中包含空格，因此需要使用<code class="highlighter-rouge">\\</code>符号对逗号<code class="highlighter-rouge">,</code>进行转义。</p>
+
+<h2 id="自动弹出候选框">自动弹出候选框</h2>
+
+<p>通过上述配置之后，在编辑markdown文件之后，需要通过命令才能弹出候选框（Windows下<code class="highlighter-rouge">ctrl+space</code>, MacOS下<code class="highlighter-rouge">cmd+space</code>），为了使候选框能够自动弹出，对vscode进行设置（修改settings.json文件）：</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"editor.tabCompletion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"on"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"[markdown]"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"editor.quickSuggestions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"other"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"comments"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"strings"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"editor.snippetSuggestions"</span><span class="p">:</span><span class="w"> </span><span class="s2">"top"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>通过这样的配置，在markdown文件中，输入<code class="highlighter-rouge">jekyll</code>即可自动弹出候选框。</p>
 
   <!-- 引入share模块 -->
   
