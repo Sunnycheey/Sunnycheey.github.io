@@ -7,10 +7,19 @@
             "label": "publish",
             "type": "shell",
             "command": "./publish.sh",
+            "args": ["${input:1}"],
             "group": {
                 "kind": "build",
                 "isDefault": true
             }
+        }
+    ],
+    "inputs": [
+        {
+            "id": "1",
+            "type": "promptString",
+            "description": "git commit message",
+            "default": "publish post"
         }
     ]
 }
