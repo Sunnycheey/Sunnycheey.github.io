@@ -11,7 +11,9 @@ then
     # the location of `number of post` is marked in the
     # format `NUM_OF_POSTS`
     file_number=$(ls _posts | wc -l)
-    sed "s/NUM_OF_POSTS/$file_number/" README.md > README.md
+    echo "The number of total post is$file_number"
+    sed "s/-[ ]+[0-9]-/-$file_number-/" README.md > tmp
+    mv tmp README.md
 
 fi
 read -p "Are you sure commit " -n 1 -r
