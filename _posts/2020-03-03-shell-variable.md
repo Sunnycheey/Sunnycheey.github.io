@@ -12,12 +12,12 @@ color: 'rgb(255,90,90)'
 
 在Shell中引用一个变量有若干中不同的写法
 
-```Shell
+```bash
 var='hello'
 echo $var; echo "$var"; echo "{var}"
 ```
 
-在大多数的情况下，`$var`和`${var}`是相同的，二者只用于区分具有二义性的变量。E.g., $varl, ${var}l。
+在大多数的情况下，`$var`和`${var}`是相同的，二者只用于区分具有二义性的变量。E.g., `$varl`, `${var}l`。
 
 而`$var`与`"$var"`区别在于：
 

@@ -156,11 +156,11 @@ var _hmt = _hmt || [];
 
 <p>在Shell中引用一个变量有若干中不同的写法</p>
 
-<pre><code class="language-Shell">var='hello'
-echo $var; echo "$var"; echo "{var}"
-</code></pre>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">var</span><span class="o">=</span><span class="s1">'hello'</span>
+<span class="nb">echo</span> <span class="nv">$var</span><span class="p">;</span> <span class="nb">echo</span> <span class="s2">"</span><span class="nv">$var</span><span class="s2">"</span><span class="p">;</span> <span class="nb">echo</span> <span class="s2">"{var}"</span>
+</code></pre></div></div>
 
-<p>在大多数的情况下，<code class="highlighter-rouge">$var</code>和<code class="highlighter-rouge">${var}</code>是相同的，二者只用于区分具有二义性的变量。E.g., $varl, ${var}l。</p>
+<p>在大多数的情况下，<code class="highlighter-rouge">$var</code>和<code class="highlighter-rouge">${var}</code>是相同的，二者只用于区分具有二义性的变量。E.g., <code class="highlighter-rouge">$varl</code>, <code class="highlighter-rouge">${var}l</code>。</p>
 
 <p>而<code class="highlighter-rouge">$var</code>与<code class="highlighter-rouge">"$var"</code>区别在于：</p>
 
