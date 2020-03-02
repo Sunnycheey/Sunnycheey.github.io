@@ -7,4 +7,4 @@
 </p>
 
 
-My personal blog dengtianhei (等天黑 in chinese) which is hosted not only on [github page]((www.sunnycheey.github.io)), but also [netfliy](www.dengtianhei.netlify.com).
+My personal blog dengtianhei (等天黑 in chinese) which is hosted not only on [github page](http://sunnycheey.github.io/), but also [netfliy](http://dengtianhei.netlify.com/).
