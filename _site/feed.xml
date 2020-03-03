@@ -1,4 +1,85 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="https://sunnycheey.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sunnycheey.github.io/" rel="alternate" type="text/html" /><updated>2020-03-02T09:30:34-06:00</updated><id>https://sunnycheey.github.io/feed.xml</id><title type="html">等天黑</title><subtitle>记录&amp;分享</subtitle><author><name>true</name></author><entry><title type="html">Shell引用变量写法之间的区别</title><link href="https://sunnycheey.github.io/2020/03/01/shell-variable.html" rel="alternate" type="text/html" title="Shell引用变量写法之间的区别" /><published>2020-03-01T09:34:48-06:00</published><updated>2020-03-01T09:34:48-06:00</updated><id>https://sunnycheey.github.io/2020/03/01/shell-variable</id><content type="html" xml:base="https://sunnycheey.github.io/2020/03/01/shell-variable.html">&lt;h1 id=&quot;记录&quot;&gt;记录&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="https://sunnycheey.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sunnycheey.github.io/" rel="alternate" type="text/html" /><updated>2020-03-02T20:40:57-06:00</updated><id>https://sunnycheey.github.io/feed.xml</id><title type="html">等天黑</title><subtitle>记录&amp;分享</subtitle><author><name>true</name></author><entry><title type="html">vscode task</title><link href="https://sunnycheey.github.io/2020/03/02/vscode-task.html" rel="alternate" type="text/html" title="vscode task" /><published>2020-03-02T16:57:56-06:00</published><updated>2020-03-02T16:57:56-06:00</updated><id>https://sunnycheey.github.io/2020/03/02/vscode-task</id><content type="html" xml:base="https://sunnycheey.github.io/2020/03/02/vscode-task.html">&lt;h1 id=&quot;vscode中task的利用&quot;&gt;VScode中task的利用&lt;/h1&gt;
+
+&lt;p&gt;在&lt;code class=&quot;highlighter-rouge&quot;&gt;VScode&lt;/code&gt;中，可以利用task来通过快捷键触发一些列命令。在编辑本站的时候，我就通过vscode的task来简化&lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll build&lt;/code&gt;, 以及&lt;code class=&quot;highlighter-rouge&quot;&gt;git&lt;/code&gt;相关的命令。&lt;/p&gt;
+
+&lt;p&gt;task是与&lt;code class=&quot;highlighter-rouge&quot;&gt;VScode&lt;/code&gt;的&lt;code class=&quot;highlighter-rouge&quot;&gt;workspace&lt;/code&gt;相关的，具体来说，在使用task时，需要在当前文件夹下新建&lt;code class=&quot;highlighter-rouge&quot;&gt;.vscode&lt;/code&gt;文件夹，在文件夹下新建&lt;code class=&quot;highlighter-rouge&quot;&gt;tasks.json&lt;/code&gt;文件。之后即可根据需求定义自己的task。&lt;/p&gt;
+
+&lt;p&gt;在部署本网站时，&lt;code class=&quot;highlighter-rouge&quot;&gt;tasks.json&lt;/code&gt;的配置如下：&lt;/p&gt;
+
+&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;version&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;2.0.0&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;tasks&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;label&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;publish&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;shell&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;command&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;./publish.sh&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;args&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;${input:1}&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;group&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;kind&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;build&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;isDefault&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;inputs&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;id&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;promptString&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;description&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;git commit message&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;default&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;publish post&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;设置中的&lt;code class=&quot;highlighter-rouge&quot;&gt;command&lt;/code&gt;设置执行的shell命令，&lt;code class=&quot;highlighter-rouge&quot;&gt;args&lt;/code&gt;字段指定命令行参数。设置为task之后，默认通过&lt;code class=&quot;highlighter-rouge&quot;&gt;cmd+shift+b&lt;/code&gt;触发任务。&lt;/p&gt;
+
+&lt;h2 id=&quot;publishsh&quot;&gt;publish.sh&lt;/h2&gt;
+
+&lt;p&gt;publish执行的流程主要包括：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;运行jekyll build命令&lt;/li&gt;
+  &lt;li&gt;git push&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;相关代码如下：&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/bash&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;read&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Are you sure build? &quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; 1 &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt;    &lt;span class=&quot;c&quot;&gt;# (optional) move to a new line&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[[&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$REPLY&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;~ ^[Yy]&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]]&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;then
+    &lt;/span&gt;docker run &lt;span class=&quot;nt&quot;&gt;--rm&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;--volume&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$PWD&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;:/srv/jekyll&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;-it&lt;/span&gt; myjekyll:1.1.0 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    jekyll build
+&lt;span class=&quot;k&quot;&gt;fi
+&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;read&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Are you sure generate new readme?&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; 1 &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt;    &lt;span class=&quot;c&quot;&gt;# (optional) move to a new line&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[[&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$REPLY&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;~ ^[Yy]&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]]&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;then&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# we also need replace the number of post in readme&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# the location of `number of post` is marked in the&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# format `NUM_OF_POSTS`&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;file_number&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;ls &lt;/span&gt;_posts | &lt;span class=&quot;nb&quot;&gt;wc&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-l&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;The number of total post is&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$file_number&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-E&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;s/-[ ]+[0-9]-/-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$file_number&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;-/&quot;&lt;/span&gt; README.md &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; tmp
+    &lt;span class=&quot;nb&quot;&gt;mv &lt;/span&gt;tmp README.md
+&lt;span class=&quot;k&quot;&gt;fi
+
+&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;read&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Are you sure commit &quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; 1 &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt;    &lt;span class=&quot;c&quot;&gt;# (optional) move to a new line&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[[&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$REPLY&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;~ ^[Yy]&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]]&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;then
+    &lt;/span&gt;git add &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'git add successfully!'&lt;/span&gt;
+    git commit &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'git commit successfully'&lt;/span&gt;
+    git push
+&lt;span class=&quot;k&quot;&gt;fi&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;在上述代码中，还加入了统计网站总文章数的功能。&lt;/p&gt;</content><author><name>true</name></author><category term="vscode" /><summary type="html">VScode中task的利用</summary></entry><entry><title type="html">Shell引用变量写法之间的区别</title><link href="https://sunnycheey.github.io/2020/03/01/shell-variable.html" rel="alternate" type="text/html" title="Shell引用变量写法之间的区别" /><published>2020-03-01T09:34:48-06:00</published><updated>2020-03-01T09:34:48-06:00</updated><id>https://sunnycheey.github.io/2020/03/01/shell-variable</id><content type="html" xml:base="https://sunnycheey.github.io/2020/03/01/shell-variable.html">&lt;h1 id=&quot;记录&quot;&gt;记录&lt;/h1&gt;
 
 &lt;p&gt;在Shell中引用一个变量有若干中不同的写法&lt;/p&gt;
 
