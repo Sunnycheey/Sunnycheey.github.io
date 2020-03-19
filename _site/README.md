@@ -2,7 +2,7 @@
 <p align="center">
 <img src="https://img.shields.io/github/last-commit/Sunnycheey/Sunnycheey.github.io?style=for-the-badge" />
 <img src="https://img.shields.io/github/commit-activity/m/Sunnycheey/Sunnycheey.github.io?style=for-the-badge" />
-<img src="https://img.shields.io/badge/TOTAL%20POST-       3-blue?style=for-the-badge" />
+<img src="https://img.shields.io/badge/TOTAL%20POST-       5-blue?style=for-the-badge" />
 <img src="https://img.shields.io/github/languages/code-size/Sunnycheey/Sunnycheey.github.io?style=for-the-badge" />
 </p>
 
