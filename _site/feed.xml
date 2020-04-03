@@ -1,4 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="https://sunnycheey.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sunnycheey.github.io/" rel="alternate" type="text/html" /><updated>2020-03-19T04:11:16-05:00</updated><id>https://sunnycheey.github.io/feed.xml</id><title type="html">等天黑</title><subtitle>记录&amp;分享</subtitle><author><name>true</name></author><entry><title type="html">beautifulsoup content missing</title><link href="https://sunnycheey.github.io/2020/03/05/beautifulsoup-lxml-content-missing.html" rel="alternate" type="text/html" title="beautifulsoup content missing" /><published>2020-03-05T13:51:42-06:00</published><updated>2020-03-05T13:51:42-06:00</updated><id>https://sunnycheey.github.io/2020/03/05/beautifulsoup-lxml-content-missing</id><content type="html" xml:base="https://sunnycheey.github.io/2020/03/05/beautifulsoup-lxml-content-missing.html">&lt;h1 id=&quot;beautifulsoup内容缺失&quot;&gt;beautifulsoup内容缺失&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="https://sunnycheey.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sunnycheey.github.io/" rel="alternate" type="text/html" /><updated>2020-04-03T10:43:16-05:00</updated><id>https://sunnycheey.github.io/feed.xml</id><title type="html">等天黑</title><subtitle>记录&amp;分享</subtitle><author><name>true</name></author><entry><title type="html">更新证书</title><link href="https://sunnycheey.github.io/2020/03/19/renew-ecc.html" rel="alternate" type="text/html" title="更新证书" /><published>2020-03-19T12:07:10-05:00</published><updated>2020-03-19T12:07:10-05:00</updated><id>https://sunnycheey.github.io/2020/03/19/renew-ecc</id><content type="html" xml:base="https://sunnycheey.github.io/2020/03/19/renew-ecc.html">&lt;h1 id=&quot;更新证书&quot;&gt;更新证书&lt;/h1&gt;
+
+&lt;p&gt;由于运行v2ray的服务器上使用的是免费证书，每过90天会失效，因此需要更新。&lt;/p&gt;
+
+&lt;p&gt;更新证书的命令如下：&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;acme.sh &lt;span class=&quot;nt&quot;&gt;--renew&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; dnegtianhei.xyz &lt;span class=&quot;nt&quot;&gt;--force&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--ecc&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;注意到&lt;code class=&quot;highlighter-rouge&quot;&gt;--ecc&lt;/code&gt;指明该证书为ecc类型的证书&lt;/p&gt;
+
+&lt;p&gt;在证书更新之前，需要将占用80端口的程序关闭，由于我是用nginx作为服务程序，因此关闭80端口程序的命令为：&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;systemctl stop nginx.service
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>true</name></author><category term="v2ray" /><summary type="html">更新证书</summary></entry><entry><title type="html">beautifulsoup content missing</title><link href="https://sunnycheey.github.io/2020/03/05/beautifulsoup-lxml-content-missing.html" rel="alternate" type="text/html" title="beautifulsoup content missing" /><published>2020-03-05T13:51:42-06:00</published><updated>2020-03-05T13:51:42-06:00</updated><id>https://sunnycheey.github.io/2020/03/05/beautifulsoup-lxml-content-missing</id><content type="html" xml:base="https://sunnycheey.github.io/2020/03/05/beautifulsoup-lxml-content-missing.html">&lt;h1 id=&quot;beautifulsoup内容缺失&quot;&gt;beautifulsoup内容缺失&lt;/h1&gt;
 
 &lt;h2 id=&quot;记录&quot;&gt;记录&lt;/h2&gt;
 
