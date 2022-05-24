@@ -5,7 +5,7 @@ subtitle: git
 date: 2020-04-03 22:08:31
 tags: git
 description: tech
-color: 'rgb(154,133,255)}'
+color: 'rgb(154,133,255)'
 ---
 
 # git命令记录
