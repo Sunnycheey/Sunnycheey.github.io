@@ -1,4 +1,38 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="https://sunnycheey.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sunnycheey.github.io/" rel="alternate" type="text/html" /><updated>2020-04-03T10:43:16-05:00</updated><id>https://sunnycheey.github.io/feed.xml</id><title type="html">等天黑</title><subtitle>记录&amp;分享</subtitle><author><name>true</name></author><entry><title type="html">更新证书</title><link href="https://sunnycheey.github.io/2020/03/19/renew-ecc.html" rel="alternate" type="text/html" title="更新证书" /><published>2020-03-19T12:07:10-05:00</published><updated>2020-03-19T12:07:10-05:00</updated><id>https://sunnycheey.github.io/2020/03/19/renew-ecc</id><content type="html" xml:base="https://sunnycheey.github.io/2020/03/19/renew-ecc.html">&lt;h1 id=&quot;更新证书&quot;&gt;更新证书&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="https://sunnycheey.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sunnycheey.github.io/" rel="alternate" type="text/html" /><updated>2022-05-24T11:12:02-05:00</updated><id>https://sunnycheey.github.io/feed.xml</id><title type="html">等天黑</title><subtitle>记录&amp;分享</subtitle><author><name>true</name></author><entry><title type="html">git-cheat-sheet</title><link href="https://sunnycheey.github.io/2020/04/03/git-cheat-sheet.html" rel="alternate" type="text/html" title="git-cheat-sheet" /><published>2020-04-03T17:08:31-05:00</published><updated>2020-04-03T17:08:31-05:00</updated><id>https://sunnycheey.github.io/2020/04/03/git-cheat-sheet</id><content type="html" xml:base="https://sunnycheey.github.io/2020/04/03/git-cheat-sheet.html">&lt;h1 id=&quot;git命令记录&quot;&gt;git命令记录&lt;/h1&gt;
+
+&lt;ul class=&quot;task-list&quot;&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git diff&lt;/code&gt; 查看暂存区内容与工作区文件之间的差异(尚未暂存的文件进行了哪些修改)。
+    &lt;blockquote&gt;
+      &lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：git diff 本身只显示尚未暂存的改动，而不是自上次提交以来所做的所有改动。 所以有时候你一下子暂存了所有更新过的文件，运行 git diff 后却什么也没有，就是这个原因。&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git diff --staged&lt;/code&gt;将对比已暂存文件与上一次提交文件之间的差异&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git commit -a&lt;/code&gt;选项能够跳过&lt;code class=&quot;highlighter-rouge&quot;&gt;git add&lt;/code&gt;步骤，而将所有已跟踪的文件暂存起来并一起提交。&lt;/li&gt;
+  &lt;li&gt;使用&lt;code class=&quot;highlighter-rouge&quot;&gt;git rm&lt;/code&gt;1）从工作目录中删除文件；2）不再跟踪对应文件；或者仅不再跟踪对应文件。若只想不再跟踪文件，而想在工作目录中仍保存文件，则可以使用&lt;code class=&quot;highlighter-rouge&quot;&gt;git rm --cached&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;在git系统中进行文件的移动操作可以通过&lt;code class=&quot;highlighter-rouge&quot;&gt;git mv&lt;/code&gt;实现。&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;使用&lt;code class=&quot;highlighter-rouge&quot;&gt;git commit --amend&lt;/code&gt;来修正最近一次的提交（最后在log中仅存在一次提交记录）：&lt;/p&gt;
+
+    &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git commit &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'something'&lt;/span&gt;
+  &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git add forgotten_file
+  &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git commit &lt;span class=&quot;nt&quot;&gt;--amend&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;使用&lt;code class=&quot;highlighter-rouge&quot;&gt;git reset HEAD file&lt;/code&gt;以及&lt;code class=&quot;highlighter-rouge&quot;&gt;git checkout -- file&lt;/code&gt;分别将文件从暂存区移出以及放弃在工作区的修改。&lt;/li&gt;
+  &lt;li&gt;在&lt;code class=&quot;highlighter-rouge&quot;&gt;git merge&lt;/code&gt;存在冲突时，解决冲突之后需要使用&lt;code class=&quot;highlighter-rouge&quot;&gt;git add&lt;/code&gt;标识冲突已解决&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git base&lt;/code&gt;变基:
+    &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;      &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git checkout exp
+      &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git rebase master
+      &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git checkout master
+      &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git merge exp
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;blockquote&gt;
+      &lt;p&gt;总的原则是，只对尚未推送或分享给别人的本地修改执行变基操作清理历史， 从不对已推送至别处的提交执行变基操作，&lt;/p&gt;
+      &lt;h2 id=&quot;todos&quot;&gt;todos&lt;/h2&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;强制使用git&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>true</name></author><category term="git" /><summary type="html">git命令记录</summary></entry><entry><title type="html">更新证书</title><link href="https://sunnycheey.github.io/2020/03/19/renew-ecc.html" rel="alternate" type="text/html" title="更新证书" /><published>2020-03-19T12:07:10-05:00</published><updated>2020-03-19T12:07:10-05:00</updated><id>https://sunnycheey.github.io/2020/03/19/renew-ecc</id><content type="html" xml:base="https://sunnycheey.github.io/2020/03/19/renew-ecc.html">&lt;h1 id=&quot;更新证书&quot;&gt;更新证书&lt;/h1&gt;
 
 &lt;p&gt;由于运行v2ray的服务器上使用的是免费证书，每过90天会失效，因此需要更新。&lt;/p&gt;
 
